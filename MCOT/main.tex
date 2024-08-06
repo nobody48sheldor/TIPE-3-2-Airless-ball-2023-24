@@ -1,0 +1,248 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb} \usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage[document]{ragged2e}
+\usepackage{tikz}
+\usepackage{multicol}
+\usepackage{changepage}
+
+\geometry{a4paper,
+ total={170mm,257mm},
+ left=15mm,
+ right=20mm,
+ top=10mm,}
+
+\renewcommand\thesection{\Roman{section}}
+\newcommand{\Th}[3]
+{
+	\begin{center}
+		\begin{tcolorbox}[width={16cm},colback={red!50!black!40!white},title={\large{\white{\textbf{\underline{Théorème}}}} \white{\Large{\textbf{[ #2 ]}} :} \white{\large{#1}} },colbacktitle=red!50!black!60!white!90,coltitle=black]
+			\white{#3 .}
+		\end{tcolorbox}
+	\end{center}
+}
+\newcommand{\Def}[3]
+{
+	\begin{center}
+		\begin{tcolorbox}[width={16cm},colback={red!10!white},title={\large{\textbf{\underline{Définition}}} \Large{\textbf{[ #2 ]}} : \large{#1} },colbacktitle=red!30!white,coltitle=black]
+			#3.
+		\end{tcolorbox}
+	\end{center}
+}
+\newcommand{\Prop}[3]
+{
+	\begin{center}
+		\begin{tcolorbox}[width={16cm},colback={green!10!white},title={\large{\textbf{\underline{Propriété}}} \Large{\textbf{[ #2 ]}} : \large{#1} },colbacktitle=green!30!white,coltitle=black]
+			#3.
+		\end{tcolorbox}
+	\end{center}
+}
+\newcommand{\Rq}[3]
+{
+	\begin{center}
+		\begin{tcolorbox}[width={16cm},colback={cyan!10!white},title={\large{\textbf{\underline{Remarque}}} \Large{\textbf{[ #2 ]}} : \large{#1} },colbacktitle=cyan!30!white,coltitle=black]
+			#3.
+		\end{tcolorbox}
+	\end{center}
+}
+\newcommand{\mc}[1] {\mathbb{#1}}
+\newcommand{\mcal}[1] {\mathcal{#1}}
+\newcommand{\codeblock}[1]{\colorbox{white!80!black}{#1}}
+\newcommand{\imp}[1]{
+	\textbf{\color{orange!90!black} #1 \color{black}}
+}
+\newcommand{\code}[1]
+{
+	\begin{lstlisting}
+		#1
+	\end{lstlisting}
+}
+\newcommand{\vtab} {\vspace{0.4cm}}
+\newcommand{\mvtab} {\vspace{0.1cm}}
+\newcommand{\htab} {\hspace{1cm}}
+\newcommand{\mhtab} {\hspace{0.4cm}}
+\newcommand{\fancy}[1] {$\mathfrak{#1}$}
+\newcommand{\alors}
+{
+	\vtab
+	\htab \color{green!70!black} $\longrightarrow$ \color{black}
+}
+\newcommand{\red}[1] {\color{red!80!black} #1 \color{black}}
+\newcommand{\blue}[1] {\color{blue!80!white} #1 \color{black}}
+\newcommand{\green}[1] {\color{green!80!black} #1 \color{black}}
+\newcommand{\orange}[1] {\color{orange!80!black} #1 \color{black}}
+\newcommand{\yellow}[1] {\color{yellow!60!black} #1 \color{black}}
+\newcommand{\white}[1] {\color{white!90!black} #1 \color{black}}
+\newcommand{\eqi}[0] {\blue{\Leftrightarrow}}
+\newcommand{\soit}[1] {\text{\underline{\color{green!60!black}Soit\color{black}}} #1}
+\newcommand{\soitt}[2]
+{
+	\text{\underline{\color{green!60!black}Soit\color{black}}}
+	\begin{cases}
+		\text{#1} \\
+		\text{#2}
+	\end{cases}
+}
+\newcommand{\soittt}[3]
+{
+	\text{\underline{\color{green!50!black}Soit\color{black}}}
+	\begin{cases}
+		\text{#1} \\
+		\text{#2} \\
+		\text{#3}
+	\end{cases}
+}
+\newcommand{\vect}[1] {\overrightarrow{#1}}
+
+
+\title{TIPE - MCOT}
+
+\begin{document}
+
+\begin{center}
+  \hrule
+	\vspace{.4cm}
+	{\textbf{\large TIPE - MCOT}}
+\end{center}
+
+{\textbf{Nom:}\ Arnaud Lelièvre \hspace{\fill} \vspace{0.5cm}}
+{\textbf{}\  \hspace{\fill} \vspace{0.5cm}}
+{\textbf{classe: MPSI 1 - MP }\ \hspace{\fill}}
+\hrule
+\date{}
+
+\vspace{1cm}
+
+\begin{center}
+\textbf{\large TIPE - Etude aérodynamique du prototype "Wilson Airless"}
+\end{center}
+
+\vspace{0.6cm}
+
+\underline{\Large{\textbf{Introduction:}}} \\
+
+\vspace{0.6cm}
+
+Le 23 février 2023, Wilson a dévoilé son projet de "balle de basketball du futur" : ”Airless”. Cette balle a pour particulatité, comme son nom l’indique, de ne pas être gonflée. Ils annoncent que cette balle a la même masse, le même rebond et la même taille qu'une balle NBA. Cependant Wilson n’a pas communiqué sur l’aérodynamisme du ballon, que l’on suspecte très différent de par la structure "Airless".
+
+\vspace{0.6cm}
+
+\underline{\Large{\textbf{Professeur encadrant du candidat :}}}\\
+
+\vspace{0.6cm}
+
+\underline{\Large{\textbf{Positionnement thématique :}}}\\
+
+\vspace{0.6cm}
+
+PHYSIQUE (Mécanique), INFORMATIQUE (Informatique pratique)
+
+\vspace{0.6cm}
+
+\underline{\Large{\textbf{Mots-clefs}}}\\
+
+\vspace{0.6cm}
+
+\begin{adjustwidth}{80pt}{80pt}
+	\begin{multicols}{2}
+
+	\underline{ {\Large Mots-clefs (en français)} } \\
+	\vspace{0.4cm}
+	Coefficient de traînée \\
+	Basketball \\
+	Mécanique des fluides \\
+	Mécanique Newtonienne \\
+	Equations de Navier-Stokes \\
+	Modélisation par éléments finis \\
+
+	\columnbreak
+	
+	\flushright{
+	\underline{ {\Large Keywords (in english)} } \\
+	\vspace{0.4cm}
+	Drag coefficient \\
+	Basketball \\
+	Fluid mechanics \\
+	Newtonian mechanics \\
+	Navier-Stokes equations \\
+	Finite difference method \\
+	}
+
+	\end{multicols}
+\end{adjustwidth}
+
+\vspace{0.6cm}
+
+\underline{\Large{\textbf{Bibliographie commentée}}} \\
+
+\vspace{0.6cm}
+
+\htab Un objet se déplaçant dans l'air est soumis à plusieurs forces influant sa trajectoire : le poids, la traînée aérodynamique, la force de Magnus, ainsi que la force d'Archimède, mais cette dernière est négligeable. Les autres ne diffèrent que très peu ou pas du tout entre une balle de basketball classique et le modèle "Airless", à l'exception de la force de traînée. Cette dernière sera donc naturellement le cœur de notre étude. \\ \mvtab
+\htab La force de traînée ralentit la vitesse de l'objet lorsqu'il se déplace dans l'air. Cette action est proportionnelle à la vitesse relative de l'air au carrée, et dépend d'autres variables comme la densité du fluide et la surface de contact. Cette force est orientée parallèlement à la trajectoire de la balle. \\  \mvtab
+\htab La force de traînée diffère entre les deux balles car le coefficient de traînée aérodynamique \textbf{$[$ 1 $]$}, traditionnellement noté $C_x$ ou bien $C_d$ est différent. Le $C_x$ est un nombre sans dimension matérialisant la résistance à un objet de se mouvoir dans un fluide. Ce coefficient s'écrit comme la somme de deux composantes : une liée à la pression dynamique et l'autre à la friction \textbf{$[$ 2 $]$}. Sa valeur avoisine 1 dans la plus part des cas \textbf{$[$ 1 $]$} et dépend majoritairement de la forme et orientation de l'objet, ainsi que du nombre de Reynolds (mesurant la turbulence de l’écoulement) qui pour nous avoisine $1.6 \cdot 10^{-5}$. Pour une balle de basketball classique ce coefficient est connu et vaut $0.54$ (à notre nombre de Reynolds) \textbf{$[$ 3 $]$}. En revanche, il est beaucoup plus difficile d’obtenir ce coefficient pour des formes plus complexes, telles que celle du ballon "Airless". \\ \mvtab
+\htab Généralement, la mesure du Cx est faite expérimentalement dans des souffleries qui permettent de relever la perte de charge (baisse de pression) associée, cependant ce n’est pas la seule méthode \textbf{$[$ 4 $]$}. Une autre technique, bien moins conventionnelle mais utile lorsque l'utilisation de souffleries est compliquée, consiste à obtenir le résultat par calcul. En calculant le champ de vitesse \textbf{$[$ 5 $]$} autour de l’objet, on peut obtenir la force de traînée ainsi que observer les zones à haute pertes de charges et donc expliquer la valeur du coefficient de traînée. Bien qu'il existe des solutions pour le calcul d'un champ \textbf{$[$ 5 $]$} pour certaines configurations, en pratique il est très souvent impossible d'en trouver. \\ \mvtab
+\htab On a donc besoin de résolution numériques. On parle de "logiciels de CFD" (pour Computational Fluid Dynamics) résolvant l'équation de Navier-Stokes. Ces outils informatiques utilisent des méthodes de résolution par éléments finis : il s’agit de faire des approximations des dérivées et de discrétiser les valeurs que le temps et l’espace peuvent prendre. On obtient alors une solution approchée, calculée récursivement \textbf{$[$ 6 $]$}. S'il n'est pas trop long de calculer des flux en 2D, il l'est cependant beaucoup plus pour obtenir un résultat de modélisation en 3D. De plus, une incertitude de calcul même faible risque de faire diverger notre système. \\ \mvtab
+\htab Une fois que l’on dispose d’une valeur de $C_x$ pour notre balle "Airless", il faut essayer d’interpréter le résultat obtenu. La première intuition est que la balle "trouée" devrait offrir une résistance à l’air plus faible et donc avoir un $C_x$ inférieur à celui d’une balle pleine. Cependant, une étude portant sur le comportement des coraux dans l’eau démontre qu’au contraire ce dernier est plus élevé pour une sphère trouée que pour une sphère pleine et ce quelle que soit la valeur du nombre de Reynolds \textbf{$[$ 7 $]$}. Cela pourrait s’expliquer par un phénomène de décollement de couche limite \textbf{$[$ 8 $]$} qui ralentit fortement l’air au niveau des alvéoles, ou à un effet masque \textbf{$[$ 9 $]$} dû à l’air à l’intérieur de la balle qui vient buter une seconde fois sur la surface opposée et crée une force résistive supplémentaire.
+
+\vspace{0.6cm}
+
+\underline{\Large{\textbf{Problématique retenue}}} \\
+
+\vspace{0.6cm}
+Bien que la balle "Airless" soit à but expérimental, Wilson annonce aussi vouloir la commercialiser. \\
+\vtab
+L'enjeu est donc de savoir si les tirs rentrant avec un balle officielle rentreraient également avec la balle "Airless" afin que les professionnels n'aient pas besoin de ré-apprendre à tirer.
+\vspace{0.6cm}
+
+\underline{\Large{\textbf{Objectifs TIPE du candidat}}} \\
+
+\vspace{0.6cm}
+
+L'objectif de mon travail est de déterminer et d'expliquer la différence de $C_x$ entre la balle "Airless" et la balle NBA, et ainsi d'en déduire si les tirs rentrant avec une balle officielle rentreraient aussi avec la balle "Airless". \\
+Pour celà, je vais construire ce qui s'apparente à un Newton-mètre, bien que beaucoup plus grand, afin de mesurer la force de traînée et donc en déduire le coefficient. Il me faudra imprimer en 3D la balle "Airless", puis ensuite faire des simulations de tirs pour comparer les deux balles. Enfin, j'expliquerai la différence de coefficient par résolution numérique.
+
+\vspace{0.6cm}
+\vspace{0.6cm}
+
+{\Huge enlever l'abstract ?}
+
+\vspace{0.6cm}
+
+\underline{\Large{\textbf{Abstract}}} \\
+
+\vspace{0.6cm}
+
+\textit{
+Back in february of 2023, Wilson posted a video introducing their brand new and futuristic basketball : "Airless". It is a 3D-printed balle with a bunch of holes all around it, but despite that the characteristics remain the same. But because of such a change of shape, we wonder how will the aerodynamics change. This paper tries to answer that very question.
+}
+
+
+\vspace{0.6cm}
+
+\underline{\Large{\textbf{Références bibliographiques}}} \\
+
+\vspace{0.6cm}
+
+\htab {\LARGE $[$ 1 $]$} | \underline{\textbf{Shape Effect on Drag}} : https://www.grc.nasa.gov/www/k-12/VirtualAero/BottleRocket/airplane/ \\ shaped.html | Tom Benson @ NASA | Glenn Research Center \\
+\vtab
+\htab {\LARGE $[$ 2 $]$} | \underline{\textbf{Drag coefficient (friction and pressure drag)}} : https://www.tec-science.com/mechanics/gases-and-liquids/ \\ drag-coefficient-friction-and-pressure-drag/ | tec-science | \underline{05/31/2020} \\
+\vtab
+\htab {\LARGE $[$ 3 $]$} | \underline{\textbf{Identification of basketball parameters for a simulation model}} | Hiroki Okubo {\small et} Mont Hubbard | 8th Conference of the International Sports Engineering Association (ISEA) | \underline{21 March 2010} \\
+\vtab
+\htab {\LARGE $[$ 4 $]$} | \underline{\textbf{The methods of drag force measurement in wind tunnels}} | Li Nan | FACULTY OF ENGINEERING AND SUSTAINABLE DEVELOPMENT | \underline{January 2013} \\
+\vtab
+\htab {\LARGE $[$ 5 $]$} | \underline{\textbf{FLOW PAST A SPHERE II: STOKES’ LAW, THE}} \\
+\underline{\textbf{BERNOULLI EQUATION, TURBULENCE, BOUNDARY LAYERS,}} \\
+\underline{\textbf{FLOW SEPARATION}} | MIT - ocw (open course ware)
+
+\htab {\LARGE $[$ 6 $]$} | \underline{\textbf{The finite difference method}} | Laboratoire Jacques-Louis-Lions \\
+
+\htab {\LARGE $[$ 7 $]$} | \underline{\textbf{Drag coefficients for single coral colonies and related spherical objects}} | Lianna C. Samuel {\small et} Stephen G. Monismith | \underline{Juillet 2013} \\
+
+\htab {\LARGE $[$ 8 $]$} | \underline{\textbf{Couche Limite}} | ESPCI \\
+
+\htab {\LARGE $[$ 9 $]$} | \underline{\textbf{Efforts causés par le vent sur les structures à treillis}} | Minh Khue TRAN | Université de Sherbrooke faculté de génie civil | \underline{Octobre 2010} \\
+\end{document}

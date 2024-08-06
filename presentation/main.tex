@@ -1,0 +1,127 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb} \usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage[document]{ragged2e}
+\usepackage{tikz}
+\usepackage{multicol}
+\usepackage{changepage}
+\usepackage{esint}
+
+\geometry{a4paper,
+ total={170mm,257mm},
+ left=15mm,
+ right=20mm,
+ top=10mm,}
+
+\renewcommand\thesection{\Roman{section}}
+\newcommand{\Th}[3]
+{
+	\begin{center}
+		\begin{tcolorbox}[width={16cm},colback={red!50!black!40!white},title={\large{\white{\textbf{\underline{Théorème}}}} \white{\Large{\textbf{[ #2 ]}} :} \white{\large{#1}} },colbacktitle=red!50!black!60!white!90,coltitle=black]
+			\white{#3 .}
+		\end{tcolorbox}
+	\end{center}
+}
+\newcommand{\Def}[3]
+{
+	\begin{center}
+		\begin{tcolorbox}[width={16cm},colback={red!10!white},title={\large{\textbf{\underline{Définition}}} \Large{\textbf{[ #2 ]}} : \large{#1} },colbacktitle=red!30!white,coltitle=black]
+			#3.
+		\end{tcolorbox}
+	\end{center}
+}
+\newcommand{\Prop}[3]
+{
+	\begin{center}
+		\begin{tcolorbox}[width={16cm},colback={green!10!white},title={\large{\textbf{\underline{Propriété}}} \Large{\textbf{[ #2 ]}} : \large{#1} },colbacktitle=green!30!white,coltitle=black]
+			#3.
+		\end{tcolorbox}
+	\end{center}
+}
+\newcommand{\Rq}[3]
+{
+	\begin{center}
+		\begin{tcolorbox}[width={16cm},colback={cyan!10!white},title={\large{\textbf{\underline{Remarque}}} \Large{\textbf{[ #2 ]}} : \large{#1} },colbacktitle=cyan!30!white,coltitle=black]
+			#3.
+		\end{tcolorbox}
+	\end{center}
+}
+\newcommand{\mc}[1] {\mathbb{#1}}
+\newcommand{\mcal}[1] {\mathcal{#1}}
+\newcommand{\codeblock}[1]{\colorbox{white!80!black}{#1}}
+\newcommand{\imp}[1]{
+	\textbf{\color{orange!90!black} #1 \color{black}}
+}
+\newcommand{\code}[1]
+{
+	\begin{lstlisting}
+		#1
+	\end{lstlisting}
+}
+\newcommand{\vtab} {\vspace{0.4cm}}
+\newcommand{\htab} {\hspace{1cm}}
+\newcommand{\mhtab} {\hspace{0.4cm}}
+\newcommand{\fancy}[1] {$\mathfrak{#1}$}
+\newcommand{\alors}
+{
+	\vtab
+	\htab \color{green!70!black} $\longrightarrow$ \color{black}
+}
+\newcommand{\red}[1] {\color{red!80!black} #1 \color{black}}
+\newcommand{\blue}[1] {\color{blue!80!white} #1 \color{black}}
+\newcommand{\green}[1] {\color{green!80!black} #1 \color{black}}
+\newcommand{\orange}[1] {\color{orange!80!black} #1 \color{black}}
+\newcommand{\yellow}[1] {\color{yellow!60!black} #1 \color{black}}
+\newcommand{\white}[1] {\color{white!90!black} #1 \color{black}}
+\newcommand{\eqi}[0] {\blue{\Leftrightarrow}}
+\newcommand{\soit}[1] {\text{\underline{\color{green!60!black}Soit\color{black}}} #1}
+\newcommand{\soitt}[2]
+{
+	\text{\underline{\color{green!60!black}Soit\color{black}}}
+	\begin{cases}
+		\text{#1} \\
+		\text{#2}
+	\end{cases}
+}
+\newcommand{\soittt}[3]
+{
+	\text{\underline{\color{green!50!black}Soit\color{black}}}
+	\begin{cases}
+		\text{#1} \\
+		\text{#2} \\
+		\text{#3}
+	\end{cases}
+}
+\newcommand{\vect}[1] {\overrightarrow{#1}}
+
+
+\title{TIPE}
+
+\begin{document}
+
+\begin{center}
+  \hrule
+	\vspace{.4cm}
+	{\textbf{\large TIPE}}
+\end{center}
+
+{\textbf{Nom:}\ Arnaud Lelièvre \hspace{\fill} \vspace{0.5cm}}
+{\textbf{}\  \hspace{\fill} \vspace{0.5cm}}
+{\textbf{classe: MPSI 1 | MP}\ \hspace{\fill}}
+\hrule
+\date{}
+
+\vspace{1cm}
+
+\begin{center}
+	\begin{equation}
+		{C_d}_{NBA} = 0.54
+	\end{equation}
+\end{center}
+
+\vspace{0.6cm}
+\vspace{0.6cm}
+\end{document}

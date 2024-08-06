@@ -1,0 +1,2 @@
+g++ main.cpp -o main; read  -n 1 -p "Press enter if everything is AOK " mainmenuinput;
+clear && echo "\n" && ./main && echo "\n"
